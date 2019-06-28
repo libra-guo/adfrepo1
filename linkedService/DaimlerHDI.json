@@ -1,0 +1,18 @@
+{
+	"name": "DaimlerHDI",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HDInsight",
+		"typeProperties": {
+			"clusterUri": "https://daimlerdemo.azurehdinsight.net",
+			"userName": "admin",
+			"isEspEnabled": false,
+			"linkedServiceName": {
+				"referenceName": "AzureBlobStorageDemo",
+				"type": "LinkedServiceReference"
+			},
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBSU1MRVJERU1PREZfMmZhYzlmMzYtNjk4OC00YzkzLWIxZDQtMDc3Y2U0ZmE3MGJmIg0KfQ=="
+		}
+	}
+}

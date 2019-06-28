@@ -1,0 +1,37 @@
+{
+	"name": "SourceDataset_req",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DaimlerHive",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "HiveObject",
+		"structure": [
+			{
+				"name": "airport_id",
+				"type": "String"
+			},
+			{
+				"name": "airport",
+				"type": "String"
+			},
+			{
+				"name": "display_airport_name",
+				"type": "String"
+			},
+			{
+				"name": "latitude",
+				"type": "Double"
+			},
+			{
+				"name": "longitude",
+				"type": "Double"
+			}
+		],
+		"typeProperties": {
+			"tableName": "`default`.`airport_code_location_lookup_clean`"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

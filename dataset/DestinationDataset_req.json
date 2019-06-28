@@ -1,0 +1,37 @@
+{
+	"name": "DestinationDataset_req",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "daimlerSql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "airport_id",
+				"type": "String"
+			},
+			{
+				"name": "airport",
+				"type": "String"
+			},
+			{
+				"name": "display_airport_name",
+				"type": "String"
+			},
+			{
+				"name": "latitude",
+				"type": "Double"
+			},
+			{
+				"name": "longitude",
+				"type": "Double"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[airport_code_location_lookup_clean]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

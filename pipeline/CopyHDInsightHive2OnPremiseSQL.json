@@ -1,0 +1,64 @@
+{
+	"name": "CopyHDInsightHive2OnPremiseSQL",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_req",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "`default`.`flight_delays_with_weather`"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[flight_delays_with_weather]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "HiveSource"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"originairportcode": "OriginAirportCode",
+							"month": "Month",
+							"dayofmonth": "DayofMonth",
+							"crsdephour": "CRSDepHour",
+							"numdelays": "NumDelays",
+							"originlatlong": "OriginLatLong"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "HiveTable4OnPremise",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "onPremiseSqlServerTable",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,41 @@
+{
+	"name": "HiveTable4OnPremise",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DaimlerHive",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "HiveObject",
+		"structure": [
+			{
+				"name": "originairportcode",
+				"type": "String"
+			},
+			{
+				"name": "month",
+				"type": "String"
+			},
+			{
+				"name": "dayofmonth",
+				"type": "String"
+			},
+			{
+				"name": "crsdephour",
+				"type": "String"
+			},
+			{
+				"name": "numdelays",
+				"type": "String"
+			},
+			{
+				"name": "originlatlong",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "`default`.`flight_delays_summary`"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

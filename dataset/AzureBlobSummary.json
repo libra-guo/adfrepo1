@@ -1,0 +1,26 @@
+{
+	"name": "AzureBlobSummary",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageDemo",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "",
+			"folderPath": "sparkcontainer/FlightsAndWeather/flightSummary.csv"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

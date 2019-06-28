@@ -1,0 +1,25 @@
+{
+	"name": "DestinationDataset_cp0",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageDemo",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "flightandweather.csv",
+			"folderPath": "sparkcontainer"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

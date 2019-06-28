@@ -1,0 +1,17 @@
+{
+	"name": "onPremiseServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\\\Data",
+			"userId": "FAREAST\\gut",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1NzEzZGJiMi1hZjQ5LTQ5YjEtOTM4OC0yYzU5YTg1OWMxNGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "bigdatagateway",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

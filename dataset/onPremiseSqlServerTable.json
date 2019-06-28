@@ -1,0 +1,41 @@
+{
+	"name": "onPremiseSqlServerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OnPremiseSqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"structure": [
+			{
+				"name": "OriginAirportCode",
+				"type": "String"
+			},
+			{
+				"name": "Month",
+				"type": "Int32"
+			},
+			{
+				"name": "DayofMonth",
+				"type": "Int32"
+			},
+			{
+				"name": "CRSDepHour",
+				"type": "Int32"
+			},
+			{
+				"name": "NumDelays",
+				"type": "Double"
+			},
+			{
+				"name": "OriginLatLong",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[flight_delays_summary]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

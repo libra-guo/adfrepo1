@@ -1,0 +1,45 @@
+{
+	"name": "flight_clean_hive",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DaimlerHive",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "HiveObject",
+		"structure": [
+			{
+				"name": "airportcode",
+				"type": "String"
+			},
+			{
+				"name": "month",
+				"type": "Int32"
+			},
+			{
+				"name": "day",
+				"type": "Int32"
+			},
+			{
+				"name": "hour",
+				"type": "Int64"
+			},
+			{
+				"name": "windspeed",
+				"type": "Single"
+			},
+			{
+				"name": "sealevelpressure",
+				"type": "Single"
+			},
+			{
+				"name": "hourlyprecip",
+				"type": "Single"
+			}
+		],
+		"typeProperties": {
+			"tableName": "`default`.`flight_weather_clean`"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

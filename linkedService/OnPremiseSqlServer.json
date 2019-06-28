@@ -1,0 +1,23 @@
+{
+	"name": "OnPremiseSqlServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=localhost;Initial Catalog=daimlerdemo;User ID=daimlerdemo",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "onpremsql"
+			}
+		},
+		"connectVia": {
+			"referenceName": "bigdatagateway",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
